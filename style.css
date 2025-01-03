@@ -74,6 +74,47 @@ html::-webkit-scrollbar-thumb{
 #menu-bar{
     display: none;
 }
+.restore {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(images/back.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.restore .restoreContent{
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 4rem;
+}
+.restore .restoreContent h2{
+    font-size: 7rem;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+    line-height: 7rem;
+    color: var(--black);
+    text-shadow: var(--box-shadow);
+}
+.restore .restoreContent p{
+    font-size: 1.8rem;
+    line-height: 2;
+    margin-bottom: 2rem;
+}
+.restore .restoreContent .restore-btn{
+    height: 3rem;
+}
+.restore .restoreContent .restore-btn button{
+    font-size: 1.8rem;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: .7rem;
+    padding: .7rem 2.4rem;
+    cursor: pointer;
+}
+.restore .restoreContent .restore-btn button:hover{
+    font-size: 2rem;
+}
 section{
     padding: 2rem 7%;
 }
@@ -82,4 +123,102 @@ section{
     font-size: 2.6rem;
     margin-bottom: 3rem;
     color: var(--black);
+}
+
+.murals .murals-row{
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+}
+.murals .murals-row .box{
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    background-color: var(--white);
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-radius: 3rem;
+    margin-right: 3rem;
+}
+.murals .murals-row .img img{
+    height: 100%;
+    width: 100%;
+}
+.murals .murals-row .img img:hover{
+    transform: scale(1.1);
+}
+.murals .murals-row .content {
+    margin-bottom: 4rem;
+}
+.murals .murals-row .murals-content h3{
+    font-size: 4rem;
+    color: var(--black);
+}
+.murals .murals-row .murals-content p{
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--black);
+}
+
+
+.swiper-pagination-bullet{
+    background-color: var(--black);
+}
+.swiper-button-next{
+    color: var(--black);
+}
+.swiper-button-prev{
+    color: var(--black);
+}
+
+
+/* media queries for web responsive */
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 1.3rem 3rem;
+    }
+    .restore .restoreContent{
+        margin-left: 0;
+        width: 80%;
+    }
+}
+
+@media (max-width:768px) {
+    #menu-bar{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 25rem;
+        background-color: var(--white);
+        height: 80vh;
+    }
+    .header .navbar.active{
+        right: 0;
+    }
+    .header .navbar a{
+        display: block;
+        font-size: 2rem;
+        color: black;
+        margin: 1.5rem;
+    }
+
+    .restore .restoreContent{
+        margin-left: 0;
+        width: 90%;
+    }
+}
+
+@media (max-width:600px){
+    html{
+        font-size: 50%;
+    }
 }
