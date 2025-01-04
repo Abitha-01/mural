@@ -1,7 +1,16 @@
 let navbar = document.querySelector('.navbar');
-document.querySelector('#menu-bar').onclick=() =>{
+let menuBar = document.querySelector('#menu-bar');
+
+menuBar.addEventListener('click', () => {
     navbar.classList.toggle('active');
-}
+});
+
+document.addEventListener('click', (event) => {
+    if (!navbar.contains(event.target) && !menuBar.contains(event.target)) {
+        navbar.classList.remove('active');
+    }
+});
+
 
 
 
@@ -11,7 +20,7 @@ var swiper = new Swiper(".murals-row", {
     loop:true,
     centeredSlides:true,
     autoplay:{
-        delay:9500,
+        delay:9000,
         disableOnInteraction:false,
     },
     pagination: {
@@ -27,59 +36,9 @@ var swiper = new Swiper(".murals-row", {
       },
       1024: {
         slidesPerView: 3,
-      },
-    },
-  });
-var swiper = new Swiper(".blogs-row", {
-    spaceBetween: 30,
-    loop:true,
-    centeredSlides:true,
-    autoplay:{
-        delay:9500,
-        disableOnInteraction:false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation:{
-        nextE1 :".swiper-button-next",
-        prevE1 :".swiper-button-prev",
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 1,
-      },
-      1024: {
-        slidesPerView: 1,
       },
     },
   });
 
-  var swiper = new Swiper(".review-row", {
-    spaceBetween: 30,
-    loop:true,
-    centeredSlides:true,
-    autoplay:{
-        delay:9500,
-        disableOnInteraction:false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
+  
+
