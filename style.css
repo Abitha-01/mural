@@ -80,7 +80,7 @@ html::-webkit-scrollbar-thumb{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background: url('https://raw.githubusercontent.com/Abitha-01/mural/main/images/Untitled%20design.png') no-repeat center center;
+    background: url('https://raw.githubusercontent.com/Abitha-01/mural/main/images/Untitled%20design.png')  center center;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -143,15 +143,13 @@ section{
     margin-bottom: 3rem;
     color: var(--black);
 }
-
-.murals {
-    background: url('https://raw.githubusercontent.com/Abitha-01/mural/blob/main/images/section.png') no-repeat center center; 
-    background-size: cover; 
-    background-attachment: fixed; 
-    height: 100vh;
-    
+.murals{
+    background: url('https://raw.githubusercontent.com/Abitha-01/mural/main/images/plainbg.png') no-repeat center center;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
-/**/
+
 .murals .murals-row{
     margin-bottom: 5rem;
     display: flex;
@@ -170,8 +168,15 @@ section{
     margin-right: 3rem;
 }
 .murals .murals-row .img img{
-    height: 100%;
-    width: 100%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Makes the shape round */
+    object-fit: cover; /* Ensures the image fits nicely in the circle */
+    display: block; /* Ensures no unwanted gaps */
+    margin: auto; /* Centers the image horizontally if inside a container */
+    border: 2px solid #fff; /* Optional: Adds a border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
 }
 .murals .murals-row .img img:hover{
     transform: scale(1.1);
@@ -191,7 +196,7 @@ section{
 
 
 .footer {
-    background: url('https://raw.githubusercontent.com/Abitha-01/mural/blob/main/images/Footer%20(2).png') no-repeat;
+    background: url('https://raw.githubusercontent.com/Abitha-01/mural/main/images/plainbg.png') no-repeat;
     background-size: cover;
     background-position: center center;
 }
@@ -386,15 +391,11 @@ section{
         font-size: 14px; /* Adjust base font size */
         padding: 10px;   /* Add padding to the body for better spacing */
     }
-    
-    .murals {
-        width: 100%; /* Full width for smaller devices */
-        height: auto; /* Adjust height based on content */
-        background-image: url('https://raw.githubusercontent.com/Abitha-01/mural/blob/main/images/section.png'); /* Add the background image */
-        background-size: cover; /* Ensure it covers the section */
-        background-position: center; /* Center the image */
-        padding: 20px; /* Adjust padding to ensure good layout */
+    .restore{
+        background-image: url('https://raw.githubusercontent.com/Abitha-01/mural/main/images/restore430.png') no-repeat center center;
     }
+    
+    
     
     .header {
         font-size: 18px; /* Smaller header font */
@@ -411,3 +412,5 @@ section{
         text-align: center;
     }
 }
+
+
